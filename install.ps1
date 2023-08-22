@@ -33,7 +33,7 @@ if (!(Test-Path $BinDir)) {
 curl.exe -Lo $LunaticZip $DownloadUrl
 tar.exe xf $LunaticZip -C $BinDir
 
-Remove-Item $DenoZip
+Remove-Item $LunaticZip
 
 $User = [System.EnvironmentVariableTarget]::User
 $Path = [System.Environment]::GetEnvironmentVariable('Path', $User)
@@ -45,3 +45,4 @@ if (!(";${Path};".ToLower() -like "*;${BinDir};*".ToLower())) {
 Write-Output "Lunatic was installed successfully to ${LunaticExe}"
 Write-Output "Run 'lunatic --help' to get started"
 Write-Output "Stuck? Join our Discord https://discord.gg/fZR5wxNp"
+
