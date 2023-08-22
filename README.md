@@ -18,6 +18,12 @@ Using Shell (macOS and Linux):
 curl -fsSL https://lunatic.solutions/install.sh | sh
 ```
 
+Using PowerShell (Windows):
+
+```
+irm https://lunatic.solutions/install.pb1 | iex
+```
+
 Using [Homebrew](https://brew.sh/) (macOS)
 
 ```

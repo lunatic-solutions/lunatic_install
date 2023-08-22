@@ -40,7 +40,7 @@ tar -xf "$exe.tar.gz" -C "$bin_dir"
 chmod +x "$exe"
 rm "$exe.tar.gz"
 
-echo "Lunatic Runtime was installed successfully to $exe"
+echo "Lunatic was installed successfully to $exe"
 
 if command -v lunatic >/dev/null; then
     echo "Run 'lunatic --help' to get started"
