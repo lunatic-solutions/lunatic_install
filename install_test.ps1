@@ -12,25 +12,25 @@ $v = $null; .\install.ps1
 Remove-Item "~\lunatic-0.12.0" -Recurse -Force -ErrorAction SilentlyContinue
 $env:LUNATIC_INSTALL = "$Home\lunatic-0.12.0"
 $v = "0.12.0"; .\install.ps1
-$lunaticVersion = ~\lunatic-0.12.0\bin\lunatic.exe --version
-if (!($lunaticVersion -like '*0.12.0*')) {
-  throw $lunaticVersion
+$LunaticVersion = ~\lunatic-0.12.0\bin\lunatic.exe --version
+if (!($LunaticVersion -like '*0.12.0*')) {
+  throw $LunaticVersion
 }
 
 # Test that we can install at a relative custom location.
 Remove-Item "bin" -Recurse -Force -ErrorAction SilentlyContinue
 $env:LUNATIC_INSTALL = "."
 $v = "0.12.0"; .\install.ps1
-$lunaticVersion = bin\lunatic.exe --version
-if (!($lunaticVersion -like '*0.12.0*')) {
-  throw $lunaticVersion
+$LunaticVersion = bin\lunatic.exe --version
+if (!($LunaticVersion -like '*0.12.0*')) {
+  throw $LunaticVersion
 }
 
 # Test that the old temp file installer still works.
 Remove-Item "~\lunatic-0.12.0" -Recurse -Force -ErrorAction SilentlyContinue
 $env:LUNATIC_INSTALL = "$Home\lunatic-0.12.0"
 $v = $null; .\install.ps1 v0.12.0
-$lunaticVersion = ~\lunatic-0.12.0\bin\lunatic.exe --version
-if (!($lunaticVersion -like '*0.12.0*')) {
-  throw $lunaticVersion
+$LunaticVersion = ~\lunatic-0.12.0\bin\lunatic.exe --version
+if (!($LunaticVersion -like '*0.12.0*')) {
+  throw $LunaticVersion
 }
