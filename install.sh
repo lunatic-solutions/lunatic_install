@@ -8,8 +8,7 @@ if ! command -v tar >/dev/null; then
 fi
 
 if [ "$OS" = "Windows_NT" ]; then
-	echo "Error: Official Lunatic Runtime builds for Windows NT are not available." 1>&2
-	exit 1
+	target="windows-amd64"
 else
 	case $(uname -sm) in
 	"Darwin") target="macos-universal" ;;

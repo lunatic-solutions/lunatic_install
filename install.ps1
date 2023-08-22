@@ -9,7 +9,9 @@ if ($Args.Length -eq 1) {
     $Version = $Args.Get(0)
 }
 
-$LunaticInstall = $env::LUNATIC_INSTALL
+$LunaticInstall = $env:LUNATIC_INSTALL
+Write-Output "HELLO WORLD ${LunaticInstall}"
+
 $BinDir = if ($LunaticInstall) {
     "${LunaticInstall}\bin"
 } else {

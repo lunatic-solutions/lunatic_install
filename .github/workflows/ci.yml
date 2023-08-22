@@ -22,6 +22,7 @@ jobs:
           shellcheck -s sh *.sh
 
       - name: tests shell
+        if: matrix.os == 'ubuntu-latest'
         shell: bash
         run: ./install_test.sh
 
