@@ -11,7 +11,8 @@ if [ "$OS" = "Windows_NT" ]; then
 	target="windows-amd64"
 else
 	case $(uname -sm) in
-	"Darwin") target="macos-universal" ;;
+	"Darwin x86_64") target="macos-x86_64" ;;
+	"Darwin aarch64") target="macos-aarch64" ;;
 	"Linux aarch64")
 		echo "Error: Official Lunatic Runtime builds for Linux aarch64 are not available."
 		exit 1
