@@ -18,18 +18,15 @@ Using Shell (macOS and Linux):
 curl -fsSL https://lunatic.solutions/install.sh | sh
 ```
 
+---
+
 Using PowerShell (Windows):
 
 ```
 irm https://lunatic.solutions/install.pb1 | iex
 ```
 
-Using [Homebrew](https://brew.sh/) (macOS)
-
-```
-brew tap lunatic-solutions/lunatic
-brew install lunatic
-```
+---
 
 Build and install from source using [Cargo](https://crates.io/crates/lunatic-runtime):
 
